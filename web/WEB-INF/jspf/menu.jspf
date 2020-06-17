@@ -28,7 +28,7 @@ if(request.getParameter("session.login") != null){
 }
 %>
 
-<h1>FINCANCY$</h1>
+<h1>QUIZ</h1>
 <%if(session.getAttribute("user.login") == null){%>
     <form method="post">
         Usuário: <input type="text" name="user.login" />
