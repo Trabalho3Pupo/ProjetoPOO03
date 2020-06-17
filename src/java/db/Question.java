@@ -33,9 +33,9 @@ public class Question {
             list.add(new Question(
                     rs.getString("description"), 
                     rs.getString("answer"), 
-                    rs.getString("answerwrong1"), 
-                    rs.getString("answerwrong2"), 
-                    rs.getString("answerwrong3")));
+                    rs.getString("wronganswer1"), 
+                    rs.getString("wronganswer2"), 
+                    rs.getString("wronganswer3")));
         }
         rs.close();
         stmt.close();

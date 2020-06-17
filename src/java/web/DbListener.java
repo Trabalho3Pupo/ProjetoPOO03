@@ -62,7 +62,7 @@ public class DbListener implements ServletContextListener {
             //CRIANDO PERGUNTAS E RESPOSTAS
             step = "Default categories creation";
             if (Question.getQuestions().isEmpty()){
-                stmt.executeUpdate( "INSERT INTO categories(description, answer, wronganswer1, wronganswer2, wronganswer3) "
+                stmt.executeUpdate ("INSERT INTO categories(description, answer, wronganswer1, wronganswer2, wronganswer3) "
                     + "VALUES('Normalmente, quantos litros de sangue uma pessoa tem?', 'Entre 4 a 6 litros', 'Tem 10 litros', 'Tem 7 litros', 'Entre 2 a 4 litros')");
                
                 stmt.executeUpdate ("INSERT INTO categories(description, answer, wronganswer1, wronganswer2, wronganswer3) "
