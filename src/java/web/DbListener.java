@@ -43,9 +43,9 @@ public class DbListener implements ServletContextListener {
                 step = "Default admin user creation";
                 stmt.executeUpdate("INSERT INTO users(name, login, password_hash, role)"
                         + "VALUES ('Administrador', 'admin', "+"123456".hashCode()+", 'ADMIN')");
-                step = "Default fulano user creation";
+                step = "Default alana user creation";
                 stmt.executeUpdate("INSERT INTO users(name, login, password_hash, role)"
-                        + "VALUES ('Fulano da Silva', 'fulano', "+"123456".hashCode()+", 'USER')");
+                        + "VALUES ('Alana pagani', 'alana', "+"123456".hashCode()+", 'USER')");
             }
 
             
