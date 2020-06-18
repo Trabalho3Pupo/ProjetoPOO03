@@ -4,6 +4,7 @@
     Author     : rlarg
 --%>
 
+<%@page import="db.Question"%>
 <%@page import="web.DbListener"%>
 <%@page import="db.User"%>
 <%@page import="java.util.ArrayList"%>
@@ -17,7 +18,7 @@
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
         <h2>Ranking melhores 10 notas</h2>
-        <p>
+        
             <table border='1' width="700" style="text-align: center">
                 <tr>
                     <th>Índice</th>
@@ -26,11 +27,11 @@
                     
                 </tr>
                 
-        </p>
+        
         </table>
         <h2>Ultimos 10 Quizes</h2>
         
-        <p>
+        
             <table border='1' width="700" style="text-align: center">
                 <tr>
                     <th>Índice</th>
@@ -39,9 +40,9 @@
                     
                 </tr>
                 
-                    
+                   
                 
-        </p>
+        
         </table>
     </body>
 </html>

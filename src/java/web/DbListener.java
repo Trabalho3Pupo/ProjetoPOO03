@@ -54,7 +54,7 @@ public class DbListener implements ServletContextListener {
                 //CRIANDO TABELA QUESTIONS PARA ARMAZENAR PERGUNTASE E RESPOSTAS
             step = " Table 'questions' creation";
             stmt.executeUpdate ("CREATE TABLE IF NOT EXISTS questions("
-                    + "description VARCHAR(250) PRIMARY KEY,"
+                    + "description VARCHAR(250),"
                     + "answer VARCHAR(250) NOT NULL,"
                     + "wronganswer1 VARCHAR(250) NOT NULL,"
                     + "wronganswer2 VARCHAR(250) NOT NULL,"

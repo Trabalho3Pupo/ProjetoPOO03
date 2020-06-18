@@ -28,7 +28,7 @@ public class Question {
         Class.forName("org.sqlite.JDBC");
         Connection con = DriverManager.getConnection(DbListener.jdbcUrl);
         Statement stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery("SELECT * FROM categories ORDER BY name");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM questions ORDER BY name");
         while(rs.next()){
             list.add(new Question(
                     rs.getString("description"), 
