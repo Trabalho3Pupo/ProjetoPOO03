@@ -40,7 +40,7 @@
                     </thead>
                            <%int i =1; %>      
                     <tbody>
-                        
+    //FAZER ORDENAÇAO                
                        <% for (Player p : Dbquiz.getPlayers()) { %>
                             <% if (i <= 10) {%>
                             <tr>    
@@ -53,6 +53,7 @@
                     </tbody>
                   </table>
             </div>
+ //COLOCAR PRA APARECER SOMENTE QUANDO FIZER O LOGIN    
              <div class="col-md-6">
             <strong>Historico</strong>
             <table class="table">
@@ -63,7 +64,7 @@
                     <th>Score</th>
                     <th>Date</th>
                   </tr>
-                </thead>
+                </thead>          
                 <tbody>
                     <% DateFormat df = new SimpleDateFormat("dd/MM/yyyy");%>
                   <% for (Player p :Dbquiz.getPlayers()) {%>

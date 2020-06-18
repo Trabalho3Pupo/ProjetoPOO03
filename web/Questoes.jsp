@@ -26,7 +26,7 @@
     }if(request.getParameter("quizz") != null){
         String score = request.getParameter("score");
 
-        
+   //FAZER O BOTAO ENVIAR JOGAR O SCORE PRO HISTORICO E SE FOR O CASO PRO RANKING     
       
     }
 
