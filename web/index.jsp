@@ -23,11 +23,10 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <body class="text-center">
-<body class="text-center">
         
-        <div class="row align-items-center" >
-         
+        <body class="text-center">
+
+           
                 <strong>Top 10</strong>
                 <table border="1">
                     <thead>
@@ -37,6 +36,7 @@
                         <th>Score</th>
                       </tr>
                     </thead>
+                    
                            <%int i =1; %>      
                     <tbody>
     //FAZER ORDENAÇAO                
@@ -51,10 +51,14 @@
                             <%}%>
                     </tbody>
                   </table>
-            </div>
- //COLOCAR PRA APARECER SOMENTE QUANDO FIZER O LOGIN    
+            
+   
 
-            <strong>Historico</strong>
+ 
+ <% 
+                if (session.getAttribute("user.login") != null) {
+                    %>
+                      <strong>Historico</strong>
             <table border="1">
                 <thead>
                     
@@ -76,6 +80,42 @@
                   </tr>
                 </tbody>
               </table>
+                    <%
+                }
+                else {
+                    %>
+                            <strong>Top 10</strong>
+                <table border="1">
+                    <thead>
+                      <tr>
+                        <th>Ranking</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    
+                              
+                    <tbody>
+    //FAZER ORDENAÇAO                
+                       <% for (Player p : Dbquiz.getPlayers()) { %>
+                            <% if (i <= 10) {%>
+                            <tr>    
+                                <td><%= i++%>º</td>
+                                <td><%= p.getName()%></td>
+                                <td><%= p.getScore()%></td>
+                            </tr>
+                            <% } %>  
+                            <%}%>
+                    </tbody>
+                  </table>
+                    <%
+                }
+
+            %>
+ 
+ 
+ 
+            
             
            
         
