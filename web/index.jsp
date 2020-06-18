@@ -4,7 +4,13 @@
     Author     : rlarg
 --%>
 
-<%@page import="db.Question"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@page import="java.text.DateFormat"%>
+<%@page import="db.Player"%>
+<%@page import="db.Dbquiz"%>
+<%@page import="db.Quiz"%>
 <%@page import="web.DbListener"%>
 <%@page import="db.User"%>
 <%@page import="java.util.ArrayList"%>
@@ -17,32 +23,61 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h2>Ranking melhores 10 notas</h2>
+        <body class="text-center">
+<body class="text-center">
         
-            <table border='1' width="700" style="text-align: center">
-                <tr>
-                    <th>Índice</th>
-                    <th>Nome </th>
-                    <th>Media</th>
+        <div class="row align-items-center" >
+         
+            <div class="col-md-6">
+                <strong>Top 10</strong>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                           <%int i =1; %>      
+                    <tbody>
+                        
+                       <% for (Player p : Dbquiz.getPlayers()) { %>
+                            <% if (i <= 10) {%>
+                            <tr>    
+                                <td><%= i++%>º</td>
+                                <td><%= p.getName()%></td>
+                                <td><%= p.getScore()%></td>
+                            </tr>
+                            <% } %>  
+                            <%}%>
+                    </tbody>
+                  </table>
+            </div>
+             <div class="col-md-6">
+            <strong>Historico</strong>
+            <table class="table">
+                <thead>
                     
-                </tr>
-                
-        
-        </table>
-        <h2>Ultimos 10 Quizes</h2>
-        
-        
-            <table border='1' width="700" style="text-align: center">
-                <tr>
-                    <th>Índice</th>
-                    <th>Nome </th>
-                    <th>Media</th>
-                    
-                </tr>
-                
-
-                
-        
-        </table>
+                  <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% DateFormat df = new SimpleDateFormat("dd/MM/yyyy");%>
+                  <% for (Player p :Dbquiz.getPlayers()) {%>
+                    <tr>
+                        <td><%= p.getName()%></td>
+                        <td><%= p.getScore()%></td>
+                        <td><%= df.format(p.getData())%></td>
+                    </tr>
+                    <%}%>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+           
+        </div>
     </body>
 </html>
