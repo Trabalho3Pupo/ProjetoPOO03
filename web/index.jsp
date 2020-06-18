@@ -28,12 +28,11 @@
         
         <div class="row align-items-center" >
          
-            <div class="col-md-6">
                 <strong>Top 10</strong>
-                <table class="table">
+                <table border="1">
                     <thead>
                       <tr>
-                        <th>#</th>
+                        <th>Ranking</th>
                         <th>Name</th>
                         <th>Score</th>
                       </tr>
@@ -54,9 +53,9 @@
                   </table>
             </div>
  //COLOCAR PRA APARECER SOMENTE QUANDO FIZER O LOGIN    
-             <div class="col-md-6">
+
             <strong>Historico</strong>
-            <table class="table">
+            <table border="1">
                 <thead>
                     
                   <tr>
@@ -77,8 +76,8 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
+            
            
-        </div>
+        
     </body>
 </html>
