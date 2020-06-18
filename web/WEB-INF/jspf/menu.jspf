@@ -41,9 +41,10 @@ if(request.getParameter("session.login") != null){
 <%}else{%>
     <form>
         <a href="<%=request.getContextPath()%>/index.jsp">INDEX</a>
-        
+        | <a href="<%=request.getContextPath()%>/Questoes.jsp">Quiz</a>
         <%if(session.getAttribute("user.role").equals("ADMIN")){%>
             [[ <a href="<%=request.getContextPath()%>/restricted/users.jsp">USUÁRIOS||</a> ]]
+            
         <%}%>
         || Bem vindo, <u><a href="<%=request.getContextPath()%>/me.jsp"><%= session.getAttribute("user.name") %></a></u>
         <input type="submit" name="session.logout" value="Log out" />
