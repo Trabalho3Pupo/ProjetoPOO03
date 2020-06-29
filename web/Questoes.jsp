@@ -24,10 +24,7 @@
     if(request.getParameter("voltar") != null){
         response.sendRedirect("index.jsp");
     }if(request.getParameter("quizz") != null){
-        String score = request.getParameter("score");
-
-   //FAZER O BOTAO ENVIAR JOGAR O SCORE PRO HISTORICO E SEEE FOR O CASO PRO RANKING     
-      
+        String score = request.getParameter("score");      
     }
 
 %>            

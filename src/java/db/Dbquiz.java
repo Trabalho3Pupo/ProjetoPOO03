@@ -9,6 +9,7 @@ package db;
  *
  * @author Alana
  */
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
@@ -24,7 +25,7 @@ public class Dbquiz {
         quiz.add(new Quiz("Qual destes países é transcontinental?", "Rússia", new String[]{"Filipinas","Groenlândia","Rússia"}));
         quiz.add(new Quiz("Qual foi o recurso utilizado inicialmente pelo homem para explicar a origem das coisas?", "Mitologia", new String[]{"Mitologia","Astronomia","Filosofia"}));
         quiz.add(new Quiz("Em que estado australiano fica situada a cidade de Sydney?", "Nova Gales do Sul", new String[]{"Queensland","Norfolk","Nova Gales do Sul"}));
-        quiz.add(new Quiz("Em que século o continente europeu foi devastado pela peste bubônica?", "No século XIV", new String[]{"No século X","No século X","No século XIV"}));
+        quiz.add(new Quiz("Em que século o continente europeu foi devastado pela peste bubônica?", "No século XIV", new String[]{"No século X","No século XX","No século XIV"}));
         quiz.add(new Quiz("Quem foi o criador da tragédia grega?", "Ésquilo", new String[]{"Ésquilo","Homero","Sófocles"}));
    
         Collections.shuffle(quiz);
@@ -40,36 +41,36 @@ public class Dbquiz {
             
             if (player.isEmpty()){          
             c.set(2020, 6, 20);
-            player.add(new Player("Ana", 4.0 , c.getTime()));
+            player.add(new Player("Ana", 10.0 , c.getTime()));
             
-            c.set(2020, 5 , 13);
-            player.add(new Player("Raquel", 9.0 , c.getTime()));
+            c.set(2020, 6 , 19);
+            player.add(new Player("Raquel", 10.0 , c.getTime()));
             
-            c.set(2020, 3, 12);
-            player.add(new Player("Jorge", 10.0 , c.getTime()));
+            c.set(2020, 5, 19);
+            player.add(new Player("Jorge", 9.0 , c.getTime()));
             
-            c.set(2020, 2, 16);
-            player.add(new Player("Rafael", 4.0 , c.getTime()));
+            c.set(2020, 5, 16);
+            player.add(new Player("Rafael", 8.0 , c.getTime()));
             
-            c.set(2020, 1, 18, 20, 39);
+            c.set(2020, 5, 14, 20, 39);
             player.add(new Player("Samanta", 7.0 , c.getTime()));
             
-            c.set(2020, 7, 26);
-            player.add(new Player("Gabriela", 1.0 , c.getTime()));
+            c.set(2020, 4, 26);
+            player.add(new Player("Gabriela", 6.0 , c.getTime()));
             
-            c.set(2020, 12, 22, 20, 39);
-            player.add(new Player("Luiza", 3.0 , c.getTime()));
+            c.set(2020, 4, 15, 20, 39);
+            player.add(new Player("Luiza", 6.0 , c.getTime()));
             
-            c.set(2020, 11, 22);
-            player.add(new Player("Camila", 9.0 , c.getTime()));
+            c.set(2020, 3, 13);
+            player.add(new Player("Camila", 5.0 , c.getTime()));
             
-            c.set(2020, 5, 23, 20, 39);
-            player.add(new Player("Beatriz", 10.0 , c.getTime()));
+            c.set(2020, 3, 11, 20, 39);
+            player.add(new Player("Beatriz", 4.0 , c.getTime()));
             
-            c.set(2020, 6, 3, 20, 39);
-            player.add(new Player("Monica", 9.0 , c.getTime()));
+            c.set(2020, 2, 3, 20, 39);
+            player.add(new Player("Monica", 3.0 , c.getTime()));
             
-            }
+            } 
          
          return player;
      }

@@ -26,39 +26,11 @@
         
         <body class="text-center">
 
-           
-                <strong>Top 10</strong>
-                <table border="1">
-                    <thead>
-                      <tr>
-                        <th>Ranking</th>
-                        <th>Name</th>
-                        <th>Score</th>
-                      </tr>
-                    </thead>
-                    
-                           <%int i =1; %>      
-                    <tbody>
-    //FAZER ORDENAÇAO                
-                       <% for (Player p : Dbquiz.getPlayers()) { %>
-                            <% if (i <= 10) {%>
-                            <tr>    
-                                <td><%= i++%>º</td>
-                                <td><%= p.getName()%></td>
-                                <td><%= p.getScore()%></td>
-                            </tr>
-                            <% } %>  
-                            <%}%>
-                    </tbody>
-                  </table>
-            
-   
 
- 
  <% 
                 if (session.getAttribute("user.login") != null) {
                     %>
-                      <strong>Historico</strong>
+                      <strong>Historico Geral </strong>
             <table border="1">
                 <thead>
                     
@@ -80,6 +52,61 @@
                   </tr>
                 </tbody>
               </table>
+                  
+                  <strong>Top 10</strong>
+                <table border="1">
+                    <thead>
+                      <tr>
+                        <th>Ranking</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    
+                              <%int i =1; %>
+                    <tbody>
+               
+                       <% for (Player p : Dbquiz.getPlayers()) { %>
+                            <% if (i <= 10) {%>
+                            
+                            <tr>    
+                                <td><%= i++%>º</td>
+                                <td><%= p.getName()%></td>
+                                <td><%= p.getScore()%></td>
+                            </tr>
+                            <% } %>  
+                            <%}%>
+                    </tbody>
+                  </table>
+                    
+                    <strong>Minhas ultimas tentativas</strong>
+                <table border="1">
+                    <thead>
+                      <tr>
+                        <th>Ranking</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                      </tr>
+                    </thead>
+                    
+                              
+                    <tbody>
+               
+                       <% for (Player p : Dbquiz.getPlayers()) { %>
+                            <% if (i <= 10) {%>
+                            <tr>    
+                                <td><%= i++%>º</td>
+                                <td><%= p.getName()%></td>
+                                <td><%= p.getScore()%></td>
+                            </tr>
+                            <% } %>  
+                            <%}%>
+                    </tbody>
+                  </table>
+                    
+                    
+                  
+                  
                     <%
                 }
                 else {
@@ -94,9 +121,9 @@
                       </tr>
                     </thead>
                     
-                              
+                              <%int i =1; %>
                     <tbody>
-    //FAZER ORDENAÇAO                
+               
                        <% for (Player p : Dbquiz.getPlayers()) { %>
                             <% if (i <= 10) {%>
                             <tr>    
@@ -108,6 +135,30 @@
                             <%}%>
                     </tbody>
                   </table>
+                    
+                              <strong>Historico Geral</strong>
+            <table border="1">
+                <thead>
+                    
+                  <tr>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>          
+                <tbody>
+                    <% DateFormat df = new SimpleDateFormat("dd/MM/yyyy");%>
+                  <% for (Player p :Dbquiz.getPlayers()) {%>
+                    <tr>
+                        <td><%= p.getName()%></td>
+                        <td><%= p.getScore()%></td>
+                        <td><%= df.format(p.getData())%></td>
+                    </tr>
+                    <%}%>
+                  </tr>
+                </tbody>
+              </table>
+                    
                     <%
                 }
 

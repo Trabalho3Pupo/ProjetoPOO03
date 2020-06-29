@@ -53,4 +53,6 @@ if(request.getParameter("session.login") != null){
 <%if(DbListener.exceptionMessage != null){%>
 <h3 style="color:red"><%= DbListener.exceptionMessage %></h3>
 <%}%>
+
+<a href="cadastro.jsp"><h2>Cadastrar</h2></a>
 <hr/>
