@@ -51,20 +51,7 @@ public class DbListener implements ServletContextListener {
                 stmt.executeUpdate("INSERT INTO users(name, login, password_hash, role)"
                         + "VALUES ('cassio', 'cassio', "+"123456".hashCode()+", 'USER')");
             }   
-                //CRIANDO TABELA QUESTIONS PARA ARMAZENAR PERGUNTASE E RESPOSTAS
-            step = " Table 'questions' creation";
-            stmt.executeUpdate ("CREATE TABLE IF NOT EXISTS questions("
-                    + "description VARCHAR(250),"
-                    + "answer VARCHAR(250) NOT NULL,"
-                    + "wronganswer1 VARCHAR(250) NOT NULL,"
-                    + "wronganswer2 VARCHAR(250) NOT NULL,"
-                    + "wronganswer3 VARCHAR(250) NOT NULL"
-                    + ")");
-            
-            
-            //CRIANDO PERGUNTAS E RESPOSTAS
-
-                
+   
             
             stmt.close();
             con.close();
